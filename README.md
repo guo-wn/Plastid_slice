@@ -237,6 +237,7 @@ cp -f Table_alignment_IR.csv ~/data/organelle/LSC_slice/summary/table
 
 cp -f Table_alignment_Angiosperms.xlsx ~/data/organelle/LSC_slice/summary/table
 cp -f Table_alignment_Angiosperms.csv ~/data/organelle/LSC_slice/summary/table
+
 cd ~/data/organelle/LSC_slice/summary/table
 fasops mergecsv Table_alignment_Angiosperms.csv Table_alignment_lsc.csv Table_alignment_ssc.csv Table_alignment_IR.csv Table_alignment_LSC21.csv Table_alignment_LSC22.csv  Table_alignment_LSC31.csv Table_alignment_LSC32.csv Table_alignment_LSC33.csv  -o total.csv -c
 
@@ -250,3 +251,5 @@ cat total.csv | perl -na -F"," -e  ' print $F[0],",",$F[4],",",$F[11],",", $F[18
 cat total.csv | perl -na -F"," -e  ' print $F[0],",",$F[5],",",$F[12],",", $F[19],",",$F[26],",",$F[33],",",$F[40],",",$F[47],",",$F[54],",",$F[61],"\n" ' >> GC.csv
 cat total.csv | perl -na -F"," -e  ' print $F[0],",",$F[6],",",$F[13],",", $F[20],",",$F[27],",",$F[34],",",$F[41],",",$F[48],",",$F[55],",",$F[62],"\n" ' >> cds.csv
 cat total.csv | perl -na -F"," -e  ' print $F[0],",",$F[7],",",$F[14],",", $F[21],",",$F[28],",",$F[35],",",$F[42],",",$F[49],",",$F[56],",",$F[63],"\n" ' >> repeat.csv
+
+# Correlation
